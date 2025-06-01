@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>تطبيقاتي السابقة</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #222;
+  }
+
+  .header {
+    background: linear-gradient(90deg, #0a66c2, #084a8a);
+    color: white;
+    padding: 1.8rem 1rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+
+  .app-container {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.4rem;
+    padding: 0 1rem;
+  }
+
+  .app-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(10, 102, 194, 0.15);
+    cursor: pointer;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(10, 102, 194, 0.35);
+  }
+
+  .overlay {
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.65) 85%);
+    padding: 1.8rem 1.5rem 2rem;
+    border-radius: 0 0 20px 20px;
+    color: #fff;
+  }
+
+  .app-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  }
+
+  .download-btn {
+    display: inline-block;
+    background-color: #ff7f50;
+    color: white;
+    padding: 0.7rem 1.6rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(255,127,80,0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  .download-btn:hover {
+    background-color: #e4683f;
+    box-shadow: 0 7px 20px rgba(228,104,63,0.75);
+  }
+
+  .screenshots {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #0a66c2 transparent;
+  }
+  .screenshots::-webkit-scrollbar {
+    height: 8px;
+  }
+  .screenshots::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .screenshots::-webkit-scrollbar-thumb {
+    background-color: #0a66c2;
+    border-radius: 10px;
+  }
+
+  .screenshots img {
+    height: 140px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .screenshots img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+  }
+
+  @media (max-width: 600px) {
+    .app-card {
+      min-height: 360px;
+    }
+    .screenshots img {
+      height: 110px;
+    }
+    .app-title {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="header">تطبيقاتي السابقة على Google Play</div>
+
+  <div class="app-container">
+
+    <!-- Lookcy -->
+    <div class="app-card" style="background-image: url('images/lookcy (1).png');">
+      <div class="overlay">
+        <div class="app-title">Lookcy</div>
+        <a class="download-btn" href="apk/Lookcy.apk" download>تحميل التطبيق</a>
+        <div class="screenshots">
+          <img src="images/lookcy (1).png" />
+          <img src="images/lookcy (2).png" />
+          <img src="images/lookcy (3).png" />
+          <img src="images/lookcy (4).png" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Nazmnii -->
+    <div class="app-card" style="background-image: url('images/nzmn (1).JPG');">
+      <div class="overlay">
+        <div class="app-title">Nazmnii</div>
+        <a class="download-btn" href="apk/Nazmnii.apk" download>تحميل التطبيق</a>
+        <div class="screenshots">
+          <img src="images/nzmn (1).png" />
+          <img src="images/nzmn (2).JPG" />
+          <img src="images/nzmn (3).JPG" />
+          <img src="images/nzmn (4).JPG" />
+          <img src="images/nzmn (5).JPG" />
+          <img src="images/nzmn (6).JPG" />
+          <img src="images/nzmn (7).JPG" />
+          <img src="images/nzmn (8).JPG" />
+        </div>
+      </div>
+    </div>
+
+    <!-- QRT -->
+    <div class="app-card" style="background-image: url('images/qrt (1).JPG');">
+      <div class="overlay">
+        <div class="app-title">QRT</div>
+        <a class="download-btn" href="apk/QRT.apk" download>تحميل التطبيق</a>
+        <div class="screenshots">
+          <img src="images/qrt (1).JPG" />
+          <img src="images/qrt (2).JPG" />
+          <img src="images/qrt (3).JPG" />
+          <img src="images/qrt (4).JPG" />
+          <img src="images/qrt (5).JPG" />
+        </div>
+      </div>
+    </div>
+
+    <!-- الكنز -->
+    <div class="app-card" style="background-image: url('images/knz (1).JPG');">
+      <div class="overlay">
+        <div class="app-title">الكنز</div>
+        <a class="download-btn" href="apk/الكنز.apk" download>تحميل التطبيق</a>
+        <div class="screenshots">
+          <img src="images/knz (1).JPG" />
+          <img src="images/knz (2).JPG" />
+          <img src="images/knz (3).JPG" />
+          <img src="images/knz (4).JPG" />
+          <img src="images/knz (5).JPG" />
+        </div>
+      </div>
+    </div>
+
+    <!-- VoiceGPT -->
+    <div class="app-card" style="background-image: url('images/vxp (1).JPG');">
+      <div class="overlay">
+        <div class="app-title">VoiceGPT</div>
+        <a class="download-btn" href="apk/VoiceGPT.apk" download>تحميل التطبيق</a>
+        <div class="screenshots">
+          <img src="images/vxp (1).JPG" />
+          <img src="images/vxp (2).JPG" />
+          <img src="images/vxp (3).JPG" />
+          <img src="images/vxp (4).JPG" />
+          <img src="images/vxp (5).JPG" />
+          <img src="images/vxp (6).JPG" />
+          <img src="images/vxp (7).JPG" />
+          <img src="images/vxp (8).JPG" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
