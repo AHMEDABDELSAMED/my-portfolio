@@ -139,6 +139,7 @@
     <div class="app-card" style="background-image: url('images/lookcy (1).png');">
       <div class="overlay">
         <div class="app-title">Lookcy</div>
+        <p>تطبيق Lookcy يساعدك على استكشاف وتصفّح أحدث صيحات الموضة بطريقة ذكية وسلسة، مع إمكانية حفظ المفضلات والتسوق مباشرةً.</p>
         <a class="download-btn" href="apk/Lookcy.apk" download>تحميل التطبيق</a>
         <div class="screenshots">
           <img src="images/lookcy (1).png" />
@@ -153,6 +154,7 @@
     <div class="app-card" style="background-image: url('images/nzmn (1).png');">
       <div class="overlay">
         <div class="app-title">Nazmnii</div>
+        <p>تطبيق Nazmnii يُتيح لك إدارة وتنظيم مهامك اليومية بشكل احترافي، مع تنبيهات ذكية وتخطيط مرن لتسهل عليك تحقيق أهدافك.</p>
         <a class="download-btn" href="apk/Nazmnii.apk" download>تحميل التطبيق</a>
         <div class="screenshots">
           <img src="images/nzmn (1).png" />
@@ -171,6 +173,7 @@
     <div class="app-card" style="background-image: url('images/qrt (1).png');">
       <div class="overlay">
         <div class="app-title">QRT</div>
+        <p>QRT هو تطبيق مبتكر لإنشاء ومشاركة رموز QR بسرعة وسهولة، يدعم النصوص، الروابط، جهات الاتصال والمزيد، بواجهة بسيطة وسلسة.</p>
         <a class="download-btn" href="apk/QRT.apk" download>تحميل التطبيق</a>
         <div class="screenshots">
           <img src="images/qrt (1).png" />
@@ -186,6 +189,7 @@
     <div class="app-card" style="background-image: url('images/knz (1).png');">
       <div class="overlay">
         <div class="app-title">الكنز</div>
+        <p>تطبيق الكنز هو لعبة تفاعلية مليئة بالألغاز والمهام الشيّقة، تهدف لاختبار ذكائك وتحدي مهاراتك في حل المشكلات.</p>
         <a class="download-btn" href="apk/الكنز.apk" download>تحميل التطبيق</a>
         <div class="screenshots">
           <img src="images/knz (1).png" />
@@ -200,8 +204,9 @@
     <!-- VoiceGPT -->
     <div class="app-card" style="background-image: url('images/vxp (1).png');">
       <div class="overlay">
-        <div class="app-title">VoiceGPT</div>
-        <a class="download-btn" href="apk/VoiceGPT.apk" download>تحميل التطبيق</a>
+        <div class="app-title">VXP</div>
+        <p>يتيح للمستخدم انشاء فيديوهات فى الوقت الفعلى من خلال مشاهده الفيديو ثم التصوير للتعليق واستكمال الفيديو </p>
+        <a class="download-btn" href="apk/VXP.apk" download>تحميل التطبيق</a>
         <div class="screenshots">
           <img src="images/vxp (1).png" />
           <img src="images/vxp (2).png" />
@@ -216,5 +221,47 @@
     </div>
 
   </div>
+   <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    let currentImageIndex = 0;
+    let currentImageList = [];
+
+    function openModal(src, images) {
+      currentImageIndex = images.indexOf(src);
+      currentImageList = images;
+      modalImg.src = src;
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
+      modalImg.src = currentImageList[currentImageIndex];
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + currentImageList.length) % currentImageList.length;
+      modalImg.src = currentImageList[currentImageIndex];
+    }
+
+    document.querySelectorAll('.screenshots').forEach(container => {
+      const images = Array.from(container.querySelectorAll('img')).map(img => img.src);
+      container.querySelectorAll('img').forEach(img => {
+        img.addEventListener('click', () => openModal(img.src, images));
+      });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (modal.style.display === 'block') {
+        if (e.key === 'ArrowRight') nextImage();
+        else if (e.key === 'ArrowLeft') prevImage();
+        else if (e.key === 'Escape') closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
